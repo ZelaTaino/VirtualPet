@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		376F967C1E4686CE0030AB67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F967B1E4686CE0030AB67 /* AppDelegate.swift */; };
+		376F967E1E4686CE0030AB67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F967D1E4686CE0030AB67 /* ViewController.swift */; };
+		376F96811E4686CE0030AB67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376F967F1E4686CE0030AB67 /* Main.storyboard */; };
+		376F96841E4686CE0030AB67 /* PlayPet.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 376F96821E4686CE0030AB67 /* PlayPet.xcdatamodeld */; };
+		376F96861E4686CE0030AB67 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 376F96851E4686CE0030AB67 /* Assets.xcassets */; };
+		376F96891E4686CE0030AB67 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376F96871E4686CE0030AB67 /* LaunchScreen.storyboard */; };
+		376F96941E4686CF0030AB67 /* PlayPetTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F96931E4686CF0030AB67 /* PlayPetTests.swift */; };
+		376F969F1E4686CF0030AB67 /* PlayPetUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F969E1E4686CF0030AB67 /* PlayPetUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		376F96901E4686CF0030AB67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376F96701E4686CE0030AB67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376F96771E4686CE0030AB67;
+			remoteInfo = PlayPet;
+		};
+		376F969B1E4686CF0030AB67 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 376F96701E4686CE0030AB67 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 376F96771E4686CE0030AB67;
+			remoteInfo = PlayPet;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		376F96781E4686CE0030AB67 /* PlayPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F967B1E4686CE0030AB67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		376F967D1E4686CE0030AB67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		376F96801E4686CE0030AB67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		376F96831E4686CE0030AB67 /* PlayPet.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = PlayPet.xcdatamodel; sourceTree = "<group>"; };
+		376F96851E4686CE0030AB67 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		376F96881E4686CE0030AB67 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		376F968A1E4686CE0030AB67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376F968F1E4686CF0030AB67 /* PlayPetTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayPetTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F96931E4686CF0030AB67 /* PlayPetTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPetTests.swift; sourceTree = "<group>"; };
+		376F96951E4686CF0030AB67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		376F969A1E4686CF0030AB67 /* PlayPetUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PlayPetUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		376F969E1E4686CF0030AB67 /* PlayPetUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayPetUITests.swift; sourceTree = "<group>"; };
+		376F96A01E4686CF0030AB67 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		376F96751E4686CE0030AB67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F968C1E4686CF0030AB67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F96971E4686CF0030AB67 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		376F966F1E4686CE0030AB67 = {
+			isa = PBXGroup;
+			children = (
+				376F967A1E4686CE0030AB67 /* PlayPet */,
+				376F96921E4686CF0030AB67 /* PlayPetTests */,
+				376F969D1E4686CF0030AB67 /* PlayPetUITests */,
+				376F96791E4686CE0030AB67 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		376F96791E4686CE0030AB67 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				376F96781E4686CE0030AB67 /* PlayPet.app */,
+				376F968F1E4686CF0030AB67 /* PlayPetTests.xctest */,
+				376F969A1E4686CF0030AB67 /* PlayPetUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		376F967A1E4686CE0030AB67 /* PlayPet */ = {
+			isa = PBXGroup;
+			children = (
+				376F967B1E4686CE0030AB67 /* AppDelegate.swift */,
+				376F967D1E4686CE0030AB67 /* ViewController.swift */,
+				376F967F1E4686CE0030AB67 /* Main.storyboard */,
+				376F96851E4686CE0030AB67 /* Assets.xcassets */,
+				376F96871E4686CE0030AB67 /* LaunchScreen.storyboard */,
+				376F968A1E4686CE0030AB67 /* Info.plist */,
+				376F96821E4686CE0030AB67 /* PlayPet.xcdatamodeld */,
+			);
+			path = PlayPet;
+			sourceTree = "<group>";
+		};
+		376F96921E4686CF0030AB67 /* PlayPetTests */ = {
+			isa = PBXGroup;
+			children = (
+				376F96931E4686CF0030AB67 /* PlayPetTests.swift */,
+				376F96951E4686CF0030AB67 /* Info.plist */,
+			);
+			path = PlayPetTests;
+			sourceTree = "<group>";
+		};
+		376F969D1E4686CF0030AB67 /* PlayPetUITests */ = {
+			isa = PBXGroup;
+			children = (
+				376F969E1E4686CF0030AB67 /* PlayPetUITests.swift */,
+				376F96A01E4686CF0030AB67 /* Info.plist */,
+			);
+			path = PlayPetUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		376F96771E4686CE0030AB67 /* PlayPet */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376F96A31E4686CF0030AB67 /* Build configuration list for PBXNativeTarget "PlayPet" */;
+			buildPhases = (
+				376F96741E4686CE0030AB67 /* Sources */,
+				376F96751E4686CE0030AB67 /* Frameworks */,
+				376F96761E4686CE0030AB67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PlayPet;
+			productName = PlayPet;
+			productReference = 376F96781E4686CE0030AB67 /* PlayPet.app */;
+			productType = "com.apple.product-type.application";
+		};
+		376F968E1E4686CF0030AB67 /* PlayPetTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376F96A61E4686CF0030AB67 /* Build configuration list for PBXNativeTarget "PlayPetTests" */;
+			buildPhases = (
+				376F968B1E4686CF0030AB67 /* Sources */,
+				376F968C1E4686CF0030AB67 /* Frameworks */,
+				376F968D1E4686CF0030AB67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376F96911E4686CF0030AB67 /* PBXTargetDependency */,
+			);
+			name = PlayPetTests;
+			productName = PlayPetTests;
+			productReference = 376F968F1E4686CF0030AB67 /* PlayPetTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		376F96991E4686CF0030AB67 /* PlayPetUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 376F96A91E4686CF0030AB67 /* Build configuration list for PBXNativeTarget "PlayPetUITests" */;
+			buildPhases = (
+				376F96961E4686CF0030AB67 /* Sources */,
+				376F96971E4686CF0030AB67 /* Frameworks */,
+				376F96981E4686CF0030AB67 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				376F969C1E4686CF0030AB67 /* PBXTargetDependency */,
+			);
+			name = PlayPetUITests;
+			productName = PlayPetUITests;
+			productReference = 376F969A1E4686CF0030AB67 /* PlayPetUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		376F96701E4686CE0030AB67 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "Glizela Taino";
+				TargetAttributes = {
+					376F96771E4686CE0030AB67 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					376F968E1E4686CF0030AB67 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 376F96771E4686CE0030AB67;
+					};
+					376F96991E4686CF0030AB67 = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 376F96771E4686CE0030AB67;
+					};
+				};
+			};
+			buildConfigurationList = 376F96731E4686CE0030AB67 /* Build configuration list for PBXProject "PlayPet" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 376F966F1E4686CE0030AB67;
+			productRefGroup = 376F96791E4686CE0030AB67 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				376F96771E4686CE0030AB67 /* PlayPet */,
+				376F968E1E4686CF0030AB67 /* PlayPetTests */,
+				376F96991E4686CF0030AB67 /* PlayPetUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		376F96761E4686CE0030AB67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F96891E4686CE0030AB67 /* LaunchScreen.storyboard in Resources */,
+				376F96861E4686CE0030AB67 /* Assets.xcassets in Resources */,
+				376F96811E4686CE0030AB67 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F968D1E4686CF0030AB67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F96981E4686CF0030AB67 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		376F96741E4686CE0030AB67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F96841E4686CE0030AB67 /* PlayPet.xcdatamodeld in Sources */,
+				376F967E1E4686CE0030AB67 /* ViewController.swift in Sources */,
+				376F967C1E4686CE0030AB67 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F968B1E4686CF0030AB67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F96941E4686CF0030AB67 /* PlayPetTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376F96961E4686CF0030AB67 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				376F969F1E4686CF0030AB67 /* PlayPetUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		376F96911E4686CF0030AB67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376F96771E4686CE0030AB67 /* PlayPet */;
+			targetProxy = 376F96901E4686CF0030AB67 /* PBXContainerItemProxy */;
+		};
+		376F969C1E4686CF0030AB67 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 376F96771E4686CE0030AB67 /* PlayPet */;
+			targetProxy = 376F969B1E4686CF0030AB67 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		376F967F1E4686CE0030AB67 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376F96801E4686CE0030AB67 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		376F96871E4686CE0030AB67 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				376F96881E4686CE0030AB67 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		376F96A11E4686CF0030AB67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		376F96A21E4686CF0030AB67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		376F96A41E4686CF0030AB67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlayPet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taino.PlayPet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		376F96A51E4686CF0030AB67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = PlayPet/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taino.PlayPet;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		376F96A71E4686CF0030AB67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlayPetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taino.PlayPetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlayPet.app/PlayPet";
+			};
+			name = Debug;
+		};
+		376F96A81E4686CF0030AB67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = PlayPetTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taino.PlayPetTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PlayPet.app/PlayPet";
+			};
+			name = Release;
+		};
+		376F96AA1E4686CF0030AB67 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PlayPetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taino.PlayPetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PlayPet;
+			};
+			name = Debug;
+		};
+		376F96AB1E4686CF0030AB67 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = PlayPetUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = taino.PlayPetUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = PlayPet;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		376F96731E4686CE0030AB67 /* Build configuration list for PBXProject "PlayPet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F96A11E4686CF0030AB67 /* Debug */,
+				376F96A21E4686CF0030AB67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		376F96A31E4686CF0030AB67 /* Build configuration list for PBXNativeTarget "PlayPet" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F96A41E4686CF0030AB67 /* Debug */,
+				376F96A51E4686CF0030AB67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		376F96A61E4686CF0030AB67 /* Build configuration list for PBXNativeTarget "PlayPetTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F96A71E4686CF0030AB67 /* Debug */,
+				376F96A81E4686CF0030AB67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		376F96A91E4686CF0030AB67 /* Build configuration list for PBXNativeTarget "PlayPetUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				376F96AA1E4686CF0030AB67 /* Debug */,
+				376F96AB1E4686CF0030AB67 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		376F96821E4686CE0030AB67 /* PlayPet.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				376F96831E4686CE0030AB67 /* PlayPet.xcdatamodel */,
+			);
+			currentVersion = 376F96831E4686CE0030AB67 /* PlayPet.xcdatamodel */;
+			path = PlayPet.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 376F96701E4686CE0030AB67 /* Project object */;
+}
