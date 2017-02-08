@@ -48,21 +48,26 @@ class ViewController: UIViewController {
         pet.feed()
         
         
-//        if pet.didPoop(){
-//            let x = arc4random_uniform(UInt32(self.view.frame.width))
-//            let y = arc4random_uniform(UInt32(self.view.frame.height))
-//            
-//            Poop(x: Int(x), y: Int(y))
-//        }
+        if pet.didPoop(){
+            let x = arc4random_uniform(UInt32(background.bounds.width - 100))
+            let y = arc4random_uniform(UInt32(background.bounds.height - 100))
+            let aPoop = pet.poop(x: Int(x), y: Int(y))
+            background.addSubview(aPoop)
+        }
         
-        poopImage.isHidden = !pet.didPoop() //did poop so hidden false
+        // poopImage.isHidden = !pet.didPoop() //did poop so hidden false
+        
+        /**
         if pet.didPoop(){
             let when = DispatchTime.now() + 0.7
             DispatchQueue.main.asyncAfter(deadline: when) {
                 self.pet.poop()
                 self.updateView()
             }
-        }
+        }**/
+
+        
+        
         updateView()
     }
     

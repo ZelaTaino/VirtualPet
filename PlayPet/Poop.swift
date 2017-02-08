@@ -2,21 +2,30 @@
 //  Poop.swift
 //  PlayPet
 //
-//  Created by Glizela Taino on 2/7/17.
+//  Created by Glizela Taino on 2/8/17.
 //  Copyright © 2017 Glizela Taino. All rights reserved.
 //
 
-import Foundation
 import UIKit
 
-class Poop{
+class Poop: UIImageView {
 
-    init(x: Int, y: Int){
-        let frame = CGRect(x: CGFloat(x), y: CGFloat(y), width: 37, height: 37)
-        let poopImg = UIImage(named: "poop.png")
-        let poop = UIImageView(frame: frame)
-        poop.image = poopImg
-        //poop.addSubview(<#T##view: UIView##UIView#>)
+    /*
+    // Only override draw() if you perform custom drawing.
+    // An empty implementation adversely affects performance during animation.
+    override func draw(_ rect: CGRect) {
+        // Drawing code
+    }
+    */
+    
+    override init(frame: CGRect) {
+        super.init(frame: frame)
+        let img = UIImage(named: "poop.png")
+        self.image = img
+    }
+    
+    required init?(coder aDecoder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
     }
 
 }

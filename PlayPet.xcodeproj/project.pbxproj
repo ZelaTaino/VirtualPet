@@ -10,7 +10,6 @@
 		371C147D1E4AC2A500CE78F9 /* poop@1x.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C147A1E4AC2A500CE78F9 /* poop@1x.png */; };
 		371C147E1E4AC2A500CE78F9 /* poop@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C147B1E4AC2A500CE78F9 /* poop@2x.png */; };
 		371C147F1E4AC2A500CE78F9 /* poop@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 371C147C1E4AC2A500CE78F9 /* poop@3x.png */; };
-		371C14811E4AE5B200CE78F9 /* Poop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 371C14801E4AE5B200CE78F9 /* Poop.swift */; };
 		376F967C1E4686CE0030AB67 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F967B1E4686CE0030AB67 /* AppDelegate.swift */; };
 		376F967E1E4686CE0030AB67 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F967D1E4686CE0030AB67 /* ViewController.swift */; };
 		376F96811E4686CE0030AB67 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 376F967F1E4686CE0030AB67 /* Main.storyboard */; };
@@ -31,6 +30,7 @@
 		376F96C01E468B210030AB67 /* fish@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 376F96B61E468B210030AB67 /* fish@3x.png */; };
 		376F96C21E468D770030AB67 /* Pet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 376F96C11E468D770030AB67 /* Pet.swift */; };
 		379F51631E497A2B000CBEF4 /* DisplayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 379F51621E497A2B000CBEF4 /* DisplayView.swift */; };
+		37B4380B1E4BBD9D0081AEB1 /* Poop.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37B4380A1E4BBD9D0081AEB1 /* Poop.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,7 +54,6 @@
 		371C147A1E4AC2A500CE78F9 /* poop@1x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poop@1x.png"; sourceTree = "<group>"; };
 		371C147B1E4AC2A500CE78F9 /* poop@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poop@2x.png"; sourceTree = "<group>"; };
 		371C147C1E4AC2A500CE78F9 /* poop@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "poop@3x.png"; sourceTree = "<group>"; };
-		371C14801E4AE5B200CE78F9 /* Poop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poop.swift; sourceTree = "<group>"; };
 		376F96781E4686CE0030AB67 /* PlayPet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PlayPet.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		376F967B1E4686CE0030AB67 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		376F967D1E4686CE0030AB67 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -81,6 +80,7 @@
 		376F96B61E468B210030AB67 /* fish@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "fish@3x.png"; sourceTree = "<group>"; };
 		376F96C11E468D770030AB67 /* Pet.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pet.swift; path = ../Pet.swift; sourceTree = "<group>"; };
 		379F51621E497A2B000CBEF4 /* DisplayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DisplayView.swift; sourceTree = "<group>"; };
+		37B4380A1E4BBD9D0081AEB1 /* Poop.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Poop.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -135,9 +135,9 @@
 				376F96C11E468D770030AB67 /* Pet.swift */,
 				376F967B1E4686CE0030AB67 /* AppDelegate.swift */,
 				376F967D1E4686CE0030AB67 /* ViewController.swift */,
+				37B4380A1E4BBD9D0081AEB1 /* Poop.swift */,
 				379F51621E497A2B000CBEF4 /* DisplayView.swift */,
 				376F967F1E4686CE0030AB67 /* Main.storyboard */,
-				371C14801E4AE5B200CE78F9 /* Poop.swift */,
 				376F96851E4686CE0030AB67 /* Assets.xcassets */,
 				376F96871E4686CE0030AB67 /* LaunchScreen.storyboard */,
 				376F968A1E4686CE0030AB67 /* Info.plist */,
@@ -334,7 +334,7 @@
 				376F96841E4686CE0030AB67 /* PlayPet.xcdatamodeld in Sources */,
 				376F96C21E468D770030AB67 /* Pet.swift in Sources */,
 				376F967E1E4686CE0030AB67 /* ViewController.swift in Sources */,
-				371C14811E4AE5B200CE78F9 /* Poop.swift in Sources */,
+				37B4380B1E4BBD9D0081AEB1 /* Poop.swift in Sources */,
 				379F51631E497A2B000CBEF4 /* DisplayView.swift in Sources */,
 				376F967C1E4686CE0030AB67 /* AppDelegate.swift in Sources */,
 			);
