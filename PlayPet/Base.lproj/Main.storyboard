@@ -25,30 +25,42 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQ2-rp-k3u">
                                 <rect key="frame" x="0.0" y="20" width="375" height="330"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-Ne-5wI">
-                                        <rect key="frame" x="137" y="115" width="100" height="100"/>
-                                    </imageView>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chirp!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWw-ae-qsv">
-                                        <rect key="frame" x="245" y="145" width="91" height="40"/>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wo4-Cg-8ac">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-Ne-5wI">
+                                                <rect key="frame" x="137" y="115" width="100" height="100"/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chirp!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWw-ae-qsv">
+                                                <rect key="frame" x="245" y="150" width="91" height="30"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="91" id="yPf-ZI-n23"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poop.png" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-uj-mIa">
+                                                <rect key="frame" x="92" y="199" width="37" height="37"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                            </imageView>
+                                        </subviews>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="40" id="8ef-eo-Daf"/>
-                                            <constraint firstAttribute="width" constant="91" id="Lzv-r6-lwk"/>
+                                            <constraint firstItem="8ah-Ne-5wI" firstAttribute="centerY" secondItem="wo4-Cg-8ac" secondAttribute="centerY" id="3Wr-Pm-aVq"/>
+                                            <constraint firstItem="8ah-Ne-5wI" firstAttribute="centerX" secondItem="wo4-Cg-8ac" secondAttribute="centerX" id="8Kh-4w-Rrf"/>
+                                            <constraint firstItem="gWw-ae-qsv" firstAttribute="centerY" secondItem="8ah-Ne-5wI" secondAttribute="centerY" id="EG2-dL-P6x"/>
+                                            <constraint firstItem="gWw-ae-qsv" firstAttribute="leading" secondItem="8ah-Ne-5wI" secondAttribute="trailing" constant="8" id="b4P-2h-maT"/>
                                         </constraints>
-                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poop.png" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-uj-mIa">
-                                        <rect key="frame" x="92" y="194" width="37" height="37"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                    </imageView>
+                                    </view>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43529411764705883" green="0.92941176470588238" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="gWw-ae-qsv" firstAttribute="centerY" secondItem="UQ2-rp-k3u" secondAttribute="centerY" id="I7H-fT-r75"/>
-                                    <constraint firstItem="gWw-ae-qsv" firstAttribute="leading" secondItem="8ah-Ne-5wI" secondAttribute="trailing" constant="8" id="c1S-Cz-6RF"/>
-                                    <constraint firstItem="8ah-Ne-5wI" firstAttribute="centerY" secondItem="UQ2-rp-k3u" secondAttribute="centerY" id="daW-sa-tru"/>
-                                    <constraint firstItem="8ah-Ne-5wI" firstAttribute="centerX" secondItem="UQ2-rp-k3u" secondAttribute="centerX" id="eUo-RG-qDT"/>
+                                    <constraint firstItem="wo4-Cg-8ac" firstAttribute="centerY" secondItem="UQ2-rp-k3u" secondAttribute="centerY" id="3tE-es-Lcu"/>
+                                    <constraint firstItem="wo4-Cg-8ac" firstAttribute="top" secondItem="UQ2-rp-k3u" secondAttribute="top" id="6il-qn-7wf"/>
+                                    <constraint firstAttribute="bottom" secondItem="wo4-Cg-8ac" secondAttribute="bottom" id="WZ2-jm-NDf"/>
+                                    <constraint firstItem="wo4-Cg-8ac" firstAttribute="centerX" secondItem="UQ2-rp-k3u" secondAttribute="centerX" id="c82-ue-tr4"/>
+                                    <constraint firstItem="wo4-Cg-8ac" firstAttribute="leading" secondItem="UQ2-rp-k3u" secondAttribute="leading" id="nOu-9i-s35"/>
+                                    <constraint firstAttribute="trailing" secondItem="wo4-Cg-8ac" secondAttribute="trailing" id="pcK-Q2-UA6"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vVB-lb-Yr8">
@@ -262,6 +274,7 @@
                         <outlet property="petImage" destination="8ah-Ne-5wI" id="PVi-U8-E5e"/>
                         <outlet property="petSound" destination="gWw-ae-qsv" id="oEe-lj-egJ"/>
                         <outlet property="poopImage" destination="JzQ-uj-mIa" id="fcG-Nn-KcK"/>
+                        <outlet property="poopView" destination="wo4-Cg-8ac" id="O95-NE-i71"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
