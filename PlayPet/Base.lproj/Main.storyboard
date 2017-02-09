@@ -25,42 +25,49 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UQ2-rp-k3u">
                                 <rect key="frame" x="0.0" y="20" width="375" height="330"/>
                                 <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wo4-Cg-8ac">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="330"/>
-                                        <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-Ne-5wI">
-                                                <rect key="frame" x="137" y="115" width="100" height="100"/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chirp!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWw-ae-qsv">
-                                                <rect key="frame" x="245" y="150" width="91" height="30"/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="91" id="yPf-ZI-n23"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
-                                                <nil key="textColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="poop.png" translatesAutoresizingMaskIntoConstraints="NO" id="JzQ-uj-mIa">
-                                                <rect key="frame" x="92" y="199" width="37" height="37"/>
-                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            </imageView>
-                                        </subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird.png" translatesAutoresizingMaskIntoConstraints="NO" id="8ah-Ne-5wI">
+                                        <rect key="frame" x="137" y="115" width="100" height="100"/>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Chirp!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gWw-ae-qsv">
+                                        <rect key="frame" x="245" y="150" width="91" height="30"/>
                                         <constraints>
-                                            <constraint firstItem="8ah-Ne-5wI" firstAttribute="centerY" secondItem="wo4-Cg-8ac" secondAttribute="centerY" id="3Wr-Pm-aVq"/>
-                                            <constraint firstItem="8ah-Ne-5wI" firstAttribute="centerX" secondItem="wo4-Cg-8ac" secondAttribute="centerX" id="8Kh-4w-Rrf"/>
-                                            <constraint firstItem="gWw-ae-qsv" firstAttribute="centerY" secondItem="8ah-Ne-5wI" secondAttribute="centerY" id="EG2-dL-P6x"/>
-                                            <constraint firstItem="gWw-ae-qsv" firstAttribute="leading" secondItem="8ah-Ne-5wI" secondAttribute="trailing" constant="8" id="b4P-2h-maT"/>
+                                            <constraint firstAttribute="width" constant="91" id="yPf-ZI-n23"/>
                                         </constraints>
+                                        <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="23"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wo4-Cg-8ac">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="284"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PXB-ao-oKf">
+                                        <rect key="frame" x="274" y="288" width="93" height="34"/>
+                                        <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="93" id="8zZ-IH-sQD"/>
+                                            <constraint firstAttribute="height" constant="34" id="D0A-i6-fjm"/>
+                                        </constraints>
+                                        <state key="normal" title="Clean">
+                                            <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="cleanPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNV-kX-MHU"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43529411764705883" green="0.92941176470588238" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="wo4-Cg-8ac" firstAttribute="centerY" secondItem="UQ2-rp-k3u" secondAttribute="centerY" id="3tE-es-Lcu"/>
+                                    <constraint firstAttribute="trailing" secondItem="PXB-ao-oKf" secondAttribute="trailing" constant="8" id="4h0-w5-SKG"/>
                                     <constraint firstItem="wo4-Cg-8ac" firstAttribute="top" secondItem="UQ2-rp-k3u" secondAttribute="top" id="6il-qn-7wf"/>
-                                    <constraint firstAttribute="bottom" secondItem="wo4-Cg-8ac" secondAttribute="bottom" id="WZ2-jm-NDf"/>
+                                    <constraint firstAttribute="bottom" secondItem="PXB-ao-oKf" secondAttribute="bottom" constant="8" id="DCM-sg-Z2R"/>
+                                    <constraint firstItem="gWw-ae-qsv" firstAttribute="leading" secondItem="8ah-Ne-5wI" secondAttribute="trailing" constant="8" id="J2b-EO-6PS"/>
+                                    <constraint firstItem="PXB-ao-oKf" firstAttribute="top" secondItem="wo4-Cg-8ac" secondAttribute="bottom" constant="4" id="T4R-UE-cLN"/>
+                                    <constraint firstItem="8ah-Ne-5wI" firstAttribute="centerX" secondItem="UQ2-rp-k3u" secondAttribute="centerX" id="TWB-Nn-v04"/>
+                                    <constraint firstItem="gWw-ae-qsv" firstAttribute="centerY" secondItem="8ah-Ne-5wI" secondAttribute="centerY" id="btS-Uo-hCU"/>
                                     <constraint firstItem="wo4-Cg-8ac" firstAttribute="centerX" secondItem="UQ2-rp-k3u" secondAttribute="centerX" id="c82-ue-tr4"/>
                                     <constraint firstItem="wo4-Cg-8ac" firstAttribute="leading" secondItem="UQ2-rp-k3u" secondAttribute="leading" id="nOu-9i-s35"/>
                                     <constraint firstAttribute="trailing" secondItem="wo4-Cg-8ac" secondAttribute="trailing" id="pcK-Q2-UA6"/>
+                                    <constraint firstItem="8ah-Ne-5wI" firstAttribute="centerY" secondItem="UQ2-rp-k3u" secondAttribute="centerY" id="q9W-Oz-vTb"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vVB-lb-Yr8">
@@ -123,7 +130,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Lqn-Ci-SZy">
-                                                <rect key="frame" x="298" y="6" width="37" height="20.5"/>
+                                                <rect key="frame" x="298" y="6.5" width="37" height="20.5"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="37" id="xfb-QT-vdF"/>
                                                 </constraints>
@@ -139,7 +146,7 @@
                                                 </constraints>
                                             </view>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="fed:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eYc-cV-5NE">
-                                                <rect key="frame" x="268.5" y="6" width="29.5" height="20.5"/>
+                                                <rect key="frame" x="268.5" y="6.5" width="29.5" height="20.5"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="0.60000002379999995" green="0.60000002379999995" blue="0.60000002379999995" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -267,13 +274,13 @@
                     </view>
                     <connections>
                         <outlet property="background" destination="UQ2-rp-k3u" id="yyY-5R-Etj"/>
+                        <outlet property="cleanButton" destination="PXB-ao-oKf" id="irg-il-E2f"/>
                         <outlet property="happinessLevel" destination="EOM-eI-fu4" id="INy-kB-SJ1"/>
                         <outlet property="happinessView" destination="9me-lH-j40" id="3eW-6z-f9h"/>
                         <outlet property="hungerLevel" destination="Lqn-Ci-SZy" id="baa-qM-o5d"/>
                         <outlet property="hungerView" destination="sPx-OY-b8j" id="gLs-ha-ACL"/>
                         <outlet property="petImage" destination="8ah-Ne-5wI" id="PVi-U8-E5e"/>
                         <outlet property="petSound" destination="gWw-ae-qsv" id="oEe-lj-egJ"/>
-                        <outlet property="poopImage" destination="JzQ-uj-mIa" id="fcG-Nn-KcK"/>
                         <outlet property="poopView" destination="wo4-Cg-8ac" id="O95-NE-i71"/>
                     </connections>
                 </viewController>
@@ -284,6 +291,5 @@
     </scenes>
     <resources>
         <image name="bird.png" width="100" height="100"/>
-        <image name="poop.png" width="45" height="42"/>
     </resources>
 </document>

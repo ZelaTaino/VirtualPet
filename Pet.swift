@@ -70,10 +70,13 @@ class Pet{
         
         let frame = CGRect(x: x,y: y,width: 37,height: 37)
         let aPoop = Poop(frame: frame)
-        //poopView.addSubview(aPoop)
         poops.append(aPoop)
         
         return aPoop
+    }
+    
+    func cleanPoop(){
+        poops.removeAll()
     }
     
     func speak() -> String{

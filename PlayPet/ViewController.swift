@@ -17,6 +17,7 @@ class ViewController: UIViewController {
             updateView()
         }
     }
+    
     let dog = Pet(animal: .dog)
     let cat = Pet(animal: .cat)
     let bird = Pet(animal: .bird)
@@ -28,47 +29,34 @@ class ViewController: UIViewController {
     @IBOutlet weak var hungerView: DisplayView!
     @IBOutlet weak var petImage: UIImageView!
     @IBOutlet weak var petSound: UILabel!
-    @IBOutlet weak var poopImage: UIImageView!
     @IBOutlet weak var poopView: UIView!
+    @IBOutlet weak var cleanButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pet = dog
         switchAnimalViews()
         petSound.isHidden = true
-        poopImage.isHidden = true
+        cleanButton.isHidden = true
     }
     
     @IBAction func playPressed(_ sender: UIButton) {
         pet.play()
-        //poopImage.isHidden = !pet.didPoop() //did poop so hidden false
         updateView()
     }
     
     @IBAction func feedPressed(_ sender: UIButton) {
         pet.feed()
         
-        
         if pet.didPoop(){
             let x = arc4random_uniform(UInt32(poopView.bounds.width - 100))
             let y = arc4random_uniform(UInt32(poopView.bounds.height - 100))
             let aPoop = pet.poop(x: Int(x), y: Int(y))
             poopView.addSubview(aPoop)
+            
+            cleanButton.isHidden = false
         }
-        
-        // poopImage.isHidden = !pet.didPoop() //did poop so hidden false
-        
-        /**
-        if pet.didPoop(){
-            let when = DispatchTime.now() + 0.7
-            DispatchQueue.main.asyncAfter(deadline: when) {
-                self.pet.poop()
-                self.updateView()
-            }
-        }**/
-
-        
-        
+  
         updateView()
     }
     
@@ -84,7 +72,6 @@ class ViewController: UIViewController {
     @IBAction func dogPressed(_ sender: UIButton) {
         removePoops()
         pet = dog
-        //poopImage.isHidden = !pet.didPoop()
         switchAnimalViews()
         updateView()
     }
@@ -92,7 +79,6 @@ class ViewController: UIViewController {
     @IBAction func catPressed(_ sender: UIButton) {
         removePoops()
         pet = cat
-        //poopImage.isHidden = !pet.didPoop()
         switchAnimalViews()
         updateView()
     }
@@ -100,7 +86,6 @@ class ViewController: UIViewController {
     @IBAction func birdPressed(_ sender: UIButton) {
         removePoops()
         pet = bird
-        //poopImage.isHidden = !pet.didPoop()
         switchAnimalViews()
         updateView()
     }
@@ -108,7 +93,6 @@ class ViewController: UIViewController {
     @IBAction func bunnyPressed(_ sender: UIButton) {
         removePoops()
         pet = bunny
-        //poopImage.isHidden = !pet.didPoop()
         switchAnimalViews()
         updateView()
     }
@@ -116,19 +100,31 @@ class ViewController: UIViewController {
     @IBAction func fishPressed(_ sender: UIButton) {
         removePoops()
         pet = fish
-        //poopImage.isHidden = !pet.didPoop()
         switchAnimalViews()
         updateView()
     }
     
+    @IBAction func cleanPressed(_ sender: UIButton) {
+        removePoops()
+        pet.cleanPoop()
+        cleanButton.isHidden = true
+    }
+
     private func switchAnimalViews(){
+        
+        if pet.didPoop(){
+            cleanButton.isHidden = false
+        }else{
+            cleanButton.isHidden = true
+        }
+        
         switch pet.animal{
         case .cat:
             let purple = UIColor(red: 142/255, green: 124/255, blue: 255/255, alpha: 1)
             happinessView.color = purple
             hungerView.color = purple
             background.backgroundColor = purple
-            //petImage.image = UIImage(named: "cat.png")
+            petImage.image = UIImage(named: "cat.png")
             
             loadPoops(poopList: pet.poops)
             
@@ -137,7 +133,7 @@ class ViewController: UIViewController {
             happinessView.color = orange
             hungerView.color = orange
             background.backgroundColor = orange
-            //petImage.image = UIImage(named: "dog.png")
+            petImage.image = UIImage(named: "dog.png")
             
             loadPoops(poopList: pet.poops)
             
@@ -146,7 +142,7 @@ class ViewController: UIViewController {
             happinessView.color = pink
             hungerView.color = pink
             background.backgroundColor = pink
-            //petImage.image = UIImage(named: "bird.png")
+            petImage.image = UIImage(named: "bird.png")
             
             loadPoops(poopList: pet.poops)
             
@@ -155,7 +151,7 @@ class ViewController: UIViewController {
             happinessView.color = mint
             hungerView.color = mint
             background.backgroundColor = mint
-            //petImage.image = UIImage(named: "bunny.png")
+            petImage.image = UIImage(named: "bunny.png")
             
             loadPoops(poopList: pet.poops)
             
@@ -164,7 +160,7 @@ class ViewController: UIViewController {
             happinessView.color = blue
             hungerView.color = blue
             background.backgroundColor = blue
-            //petImage.image = UIImage(named: "fish.png")
+            petImage.image = UIImage(named: "fish.png")
             
             loadPoops(poopList: pet.poops)
             
