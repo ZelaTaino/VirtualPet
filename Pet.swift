@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import AVFoundation
 
 class Pet{
 
@@ -23,7 +24,8 @@ class Pet{
     //Data
     private (set) var happinessLevel: Int
     private (set) var fedLevel: Int
-    private (set) var sound: String
+    var sound: SystemSoundID!
+    var audioPlayer = AVAudioPlayer()
     private (set) var image: UIImage
     var poops = [Poop]()
     var animal: Animal
@@ -32,7 +34,6 @@ class Pet{
         self.animal = animal
         happinessLevel = 50
         fedLevel = 50
-        sound = ""
         
         switch animal {
         case .dog:
@@ -46,9 +47,32 @@ class Pet{
         case .bird:
             image = UIImage(named: "bird.png")!
         }
-
-
         
+        sound = createSound()
+    }
+    
+    func createSound() -> SystemSoundID {
+        var soundID: SystemSoundID = 0
+        
+        switch animal {
+        case .dog:
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "dog" as CFString!, "mp3" as CFString!, nil)
+            AudioServicesCreateSystemSoundID(soundURL!, &soundID)
+        case .cat:
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "cat" as CFString!, "mp3" as CFString!, nil)
+            AudioServicesCreateSystemSoundID(soundURL!, &soundID)
+        case .bunny:
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "bunny" as CFString!, "mp3" as CFString!, nil)
+            AudioServicesCreateSystemSoundID(soundURL!, &soundID)
+        case .fish:
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "fish" as CFString!, "mp3" as CFString!, nil)
+            AudioServicesCreateSystemSoundID(soundURL!, &soundID)
+        case .bird:
+            let soundURL = CFBundleCopyResourceURL(CFBundleGetMainBundle(), "bird" as CFString!, "mp3" as CFString!, nil)
+            AudioServicesCreateSystemSoundID(soundURL!, &soundID)
+        }
+        
+        return soundID
     }
     
     func setImage(petImage: UIImage) {
@@ -100,21 +124,8 @@ class Pet{
         poops.removeAll()
     }
     
-    func speak() -> String{
-        switch animal {
-        case .dog:
-            sound = "Bark!"
-        case .cat:
-            sound = "Meow!"
-        case .bunny:
-            sound = "Squeak!"
-        case .fish:
-            sound = "Bloop!"
-        case .bird:
-            sound = "Chirp!"
-        }
-        
-        return sound
+    func speak(){
+        AudioServicesPlaySystemSound(sound)
     }
 
 }

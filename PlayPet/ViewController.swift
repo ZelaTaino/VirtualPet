@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
@@ -29,14 +30,12 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var hungerView: DisplayView!
     @IBOutlet weak var petImage: UIImageView!
-    @IBOutlet weak var petSound: UILabel!
     @IBOutlet weak var cleanButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         pet = dog
         switchAnimalViews()
-        petSound.isHidden = true
         cleanButton.isHidden = true
         imagePicker.delegate = self
         
@@ -49,6 +48,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBAction func playPressed(_ sender: UIButton) {
         pet.play()
         updateView()
+        
     }
     
     @IBAction func feedPressed(_ sender: UIButton) {
@@ -67,12 +67,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     @IBAction func speakPressesDown(_ sender: UIButton) {
-        petSound.text = pet.speak()
-        petSound.isHidden = false
+        pet.speak()
     }
     
     @IBAction func speakPressedUp(_ sender: Any) {
-        petSound.isHidden = true
     }
     
     @IBAction func dogPressed(_ sender: UIButton) {
@@ -130,7 +128,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = purple
             hungerView.color = purple
             background.backgroundColor = purple
-//            petImage.image = UIImage(named: "cat.png")
             petImage.image = pet.getImage()
             loadPoops(poopList: pet.poops)
             
@@ -139,7 +136,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = orange
             hungerView.color = orange
             background.backgroundColor = orange
-//            petImage.image = UIImage(named: "dog.png")
             petImage.image = pet.getImage()
             
             loadPoops(poopList: pet.poops)
@@ -149,7 +145,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = pink
             hungerView.color = pink
             background.backgroundColor = pink
-//            petImage.image = UIImage(named: "bird.png")
             petImage.image = pet.getImage()
             
             loadPoops(poopList: pet.poops)
@@ -159,7 +154,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = mint
             hungerView.color = mint
             background.backgroundColor = mint
-//            petImage.image = UIImage(named: "bunny.png")
             petImage.image = pet.getImage()
             
             loadPoops(poopList: pet.poops)
@@ -169,7 +163,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = blue
             hungerView.color = blue
             background.backgroundColor = blue
-//            petImage.image = UIImage(named: "fish.png")
             petImage.image = pet.getImage()
             
             loadPoops(poopList: pet.poops)
