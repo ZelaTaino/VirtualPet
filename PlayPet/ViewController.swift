@@ -28,7 +28,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     @IBOutlet weak var happinessView: DisplayView!
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var hungerView: DisplayView!
-    @IBOutlet weak var petImage: UIButton!
+    @IBOutlet weak var petImage: UIImageView!
     @IBOutlet weak var petSound: UILabel!
     @IBOutlet weak var cleanButton: UIButton!
     
@@ -39,6 +39,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         petSound.isHidden = true
         cleanButton.isHidden = true
         imagePicker.delegate = self
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: #selector(ViewController.takePetPicture))
+        petImage.isUserInteractionEnabled = true
+        petImage.addGestureRecognizer(tapGesture)
         
     }
     
@@ -126,7 +130,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = purple
             hungerView.color = purple
             background.backgroundColor = purple
-            petImage.setImage(UIImage(named: "cat.png"), for: .normal)
+            petImage.image = UIImage(named: "cat.png")
             
             loadPoops(poopList: pet.poops)
             
@@ -135,7 +139,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = orange
             hungerView.color = orange
             background.backgroundColor = orange
-            petImage.setImage(UIImage(named: "dog.png"), for: .normal)
+            petImage.image = UIImage(named: "dog.png")
             
             loadPoops(poopList: pet.poops)
             
@@ -144,7 +148,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = pink
             hungerView.color = pink
             background.backgroundColor = pink
-            petImage.setImage(UIImage(named: "bird.png"), for: .normal)
+            petImage.image = UIImage(named: "bird.png")
             
             loadPoops(poopList: pet.poops)
             
@@ -153,7 +157,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = mint
             hungerView.color = mint
             background.backgroundColor = mint
-            petImage.setImage(UIImage(named: "bunny.png"), for: .normal)
+            petImage.image = UIImage(named: "bunny.png")
             
             loadPoops(poopList: pet.poops)
             
@@ -162,7 +166,7 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = blue
             hungerView.color = blue
             background.backgroundColor = blue
-            petImage.setImage(UIImage(named: "fish.png"), for: .normal)
+            petImage.image = UIImage(named: "fish.png")
             
             loadPoops(poopList: pet.poops)
             
@@ -192,18 +196,25 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             poop.removeFromSuperview()
         }
     }
-
-    @IBAction func takePetPicture(_ sender: Any) {
+    
+    func takePetPicture(){
         imagePicker.delegate = self
         imagePicker.sourceType = .camera
         imagePicker.cameraCaptureMode = .photo
         imagePicker.modalPresentationStyle = .fullScreen
         present(imagePicker, animated: true, completion: nil)
     }
+
+//    @IBAction func takePetPicture(_ sender: Any) {
+//        imagePicker.delegate = self
+//        imagePicker.sourceType = .camera
+//        imagePicker.cameraCaptureMode = .photo
+//        imagePicker.modalPresentationStyle = .fullScreen
+//        present(imagePicker, animated: true, completion: nil)
+//    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
-        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
-        petImage.setImage(image, for: .normal)
+        petImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
     }
     

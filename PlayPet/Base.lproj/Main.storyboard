@@ -48,22 +48,18 @@
                                             <action selector="cleanPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="QNV-kX-MHU"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P5X-SV-X6q">
+                                    <imageView userInteractionEnabled="NO" contentMode="top" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bird.png" translatesAutoresizingMaskIntoConstraints="NO" id="x2x-Mz-o6n">
                                         <rect key="frame" x="137" y="115" width="100" height="100"/>
-                                        <state key="normal" image="bird.png"/>
-                                        <connections>
-                                            <action selector="takePetPicture:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3VV-BW-xbz"/>
-                                        </connections>
-                                    </button>
+                                    </imageView>
                                 </subviews>
                                 <color key="backgroundColor" red="0.43529411764705883" green="0.92941176470588238" blue="0.66274509803921566" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="PXB-ao-oKf" secondAttribute="trailing" constant="8" id="4h0-w5-SKG"/>
                                     <constraint firstAttribute="bottom" secondItem="PXB-ao-oKf" secondAttribute="bottom" constant="8" id="DCM-sg-Z2R"/>
-                                    <constraint firstItem="gWw-ae-qsv" firstAttribute="leading" secondItem="P5X-SV-X6q" secondAttribute="trailing" constant="8" id="dyE-tv-k4d"/>
-                                    <constraint firstItem="gWw-ae-qsv" firstAttribute="centerY" secondItem="P5X-SV-X6q" secondAttribute="centerY" id="g4c-dv-Lde"/>
-                                    <constraint firstItem="P5X-SV-X6q" firstAttribute="centerY" secondItem="UQ2-rp-k3u" secondAttribute="centerY" id="tfa-b8-pn4"/>
-                                    <constraint firstItem="P5X-SV-X6q" firstAttribute="centerX" secondItem="UQ2-rp-k3u" secondAttribute="centerX" id="xNd-Si-wcH"/>
+                                    <constraint firstItem="gWw-ae-qsv" firstAttribute="centerY" secondItem="x2x-Mz-o6n" secondAttribute="centerY" id="Ecs-7U-9fF"/>
+                                    <constraint firstItem="x2x-Mz-o6n" firstAttribute="centerX" secondItem="UQ2-rp-k3u" secondAttribute="centerX" id="Erj-ys-V9z"/>
+                                    <constraint firstItem="gWw-ae-qsv" firstAttribute="leading" secondItem="x2x-Mz-o6n" secondAttribute="trailing" constant="8" id="lkH-Pt-TkL"/>
+                                    <constraint firstItem="x2x-Mz-o6n" firstAttribute="centerY" secondItem="UQ2-rp-k3u" secondAttribute="centerY" id="otJ-bG-C2F"/>
                                 </constraints>
                             </view>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="30" translatesAutoresizingMaskIntoConstraints="NO" id="vVB-lb-Yr8">
@@ -275,7 +271,7 @@
                         <outlet property="happinessView" destination="9me-lH-j40" id="3eW-6z-f9h"/>
                         <outlet property="hungerLevel" destination="Lqn-Ci-SZy" id="baa-qM-o5d"/>
                         <outlet property="hungerView" destination="sPx-OY-b8j" id="gLs-ha-ACL"/>
-                        <outlet property="petImage" destination="P5X-SV-X6q" id="lsd-K2-Htp"/>
+                        <outlet property="petImage" destination="x2x-Mz-o6n" id="dS4-aQ-NAg"/>
                         <outlet property="petSound" destination="gWw-ae-qsv" id="oEe-lj-egJ"/>
                     </connections>
                 </viewController>
