@@ -130,8 +130,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = purple
             hungerView.color = purple
             background.backgroundColor = purple
-            petImage.image = UIImage(named: "cat.png")
-            
+//            petImage.image = UIImage(named: "cat.png")
+            petImage.image = pet.getImage()
             loadPoops(poopList: pet.poops)
             
         case .dog:
@@ -139,7 +139,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = orange
             hungerView.color = orange
             background.backgroundColor = orange
-            petImage.image = UIImage(named: "dog.png")
+//            petImage.image = UIImage(named: "dog.png")
+            petImage.image = pet.getImage()
             
             loadPoops(poopList: pet.poops)
             
@@ -148,7 +149,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = pink
             hungerView.color = pink
             background.backgroundColor = pink
-            petImage.image = UIImage(named: "bird.png")
+//            petImage.image = UIImage(named: "bird.png")
+            petImage.image = pet.getImage()
             
             loadPoops(poopList: pet.poops)
             
@@ -157,7 +159,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = mint
             hungerView.color = mint
             background.backgroundColor = mint
-            petImage.image = UIImage(named: "bunny.png")
+//            petImage.image = UIImage(named: "bunny.png")
+            petImage.image = pet.getImage()
             
             loadPoops(poopList: pet.poops)
             
@@ -166,7 +169,8 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
             happinessView.color = blue
             hungerView.color = blue
             background.backgroundColor = blue
-            petImage.image = UIImage(named: "fish.png")
+//            petImage.image = UIImage(named: "fish.png")
+            petImage.image = pet.getImage()
             
             loadPoops(poopList: pet.poops)
             
@@ -191,7 +195,6 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
     }
     
     func removePoops(poopList: [Poop]){
-        
         for (_, poop) in poopList.enumerated() {
             poop.removeFromSuperview()
         }
@@ -204,16 +207,10 @@ class ViewController: UIViewController, UINavigationControllerDelegate, UIImageP
         imagePicker.modalPresentationStyle = .fullScreen
         present(imagePicker, animated: true, completion: nil)
     }
-
-//    @IBAction func takePetPicture(_ sender: Any) {
-//        imagePicker.delegate = self
-//        imagePicker.sourceType = .camera
-//        imagePicker.cameraCaptureMode = .photo
-//        imagePicker.modalPresentationStyle = .fullScreen
-//        present(imagePicker, animated: true, completion: nil)
-//    }
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        pet.setImage(petImage: image!)
         petImage.image = info[UIImagePickerControllerOriginalImage] as? UIImage
         dismiss(animated: true, completion: nil)
     }

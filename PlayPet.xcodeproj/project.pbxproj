@@ -267,6 +267,7 @@
 				TargetAttributes = {
 					376F96771E4686CE0030AB67 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = YCDC69KK4X;
 						ProvisioningStyle = Automatic;
 					};
 					376F968E1E4686CF0030AB67 = {
@@ -506,6 +507,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YCDC69KK4X;
 				INFOPLIST_FILE = PlayPet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = taino.PlayPet;
@@ -518,6 +520,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = YCDC69KK4X;
 				INFOPLIST_FILE = PlayPet/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = taino.PlayPet;

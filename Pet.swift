@@ -24,6 +24,7 @@ class Pet{
     private (set) var happinessLevel: Int
     private (set) var fedLevel: Int
     private (set) var sound: String
+    private (set) var image: UIImage
     var poops = [Poop]()
     var animal: Animal
     
@@ -32,6 +33,30 @@ class Pet{
         happinessLevel = 50
         fedLevel = 50
         sound = ""
+        
+        switch animal {
+        case .dog:
+            image = UIImage(named: "dog.png")!
+        case .cat:
+            image = UIImage(named: "cat.png")!
+        case .bunny:
+            image = UIImage(named: "bunny.png")!
+        case .fish:
+            image = UIImage(named: "fish.png")!
+        case .bird:
+            image = UIImage(named: "bird.png")!
+        }
+
+
+        
+    }
+    
+    func setImage(petImage: UIImage) {
+        image = petImage
+    }
+    
+    func getImage() -> UIImage {
+        return image
     }
     
     func play(){
