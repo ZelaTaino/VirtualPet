@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
 
     @IBOutlet weak var happinessLevel: UILabel!
     
@@ -23,13 +23,13 @@ class ViewController: UIViewController {
     let bird = Pet(animal: .bird)
     let bunny = Pet(animal: .bunny)
     let fish = Pet(animal: .fish)
+    let imagePicker = UIImagePickerController()
     @IBOutlet weak var hungerLevel: UILabel!
     @IBOutlet weak var happinessView: DisplayView!
     @IBOutlet weak var background: UIView!
     @IBOutlet weak var hungerView: DisplayView!
-    @IBOutlet weak var petImage: UIImageView!
+    @IBOutlet weak var petImage: UIButton!
     @IBOutlet weak var petSound: UILabel!
-    @IBOutlet weak var poopView: UIView!
     @IBOutlet weak var cleanButton: UIButton!
     
     override func viewDidLoad() {
@@ -38,6 +38,8 @@ class ViewController: UIViewController {
         switchAnimalViews()
         petSound.isHidden = true
         cleanButton.isHidden = true
+        imagePicker.delegate = self
+        
     }
     
     @IBAction func playPressed(_ sender: UIButton) {
@@ -49,10 +51,10 @@ class ViewController: UIViewController {
         pet.feed()
         
         if pet.didPoop(){
-            let x = arc4random_uniform(UInt32(poopView.bounds.width - 100))
-            let y = arc4random_uniform(UInt32(poopView.bounds.height - 100))
+            let x = arc4random_uniform(UInt32(background.bounds.width - 37))
+            let y = arc4random_uniform(UInt32(background.bounds.height - 70))
             let aPoop = pet.poop(x: Int(x), y: Int(y))
-            poopView.addSubview(aPoop)
+            background.addSubview(aPoop)
             
             cleanButton.isHidden = false
         }
@@ -70,42 +72,42 @@ class ViewController: UIViewController {
     }
     
     @IBAction func dogPressed(_ sender: UIButton) {
-        removePoops()
+        removePoops(poopList: pet.poops)
         pet = dog
         switchAnimalViews()
         updateView()
     }
     
     @IBAction func catPressed(_ sender: UIButton) {
-        removePoops()
+        removePoops(poopList: pet.poops)
         pet = cat
         switchAnimalViews()
         updateView()
     }
     
     @IBAction func birdPressed(_ sender: UIButton) {
-        removePoops()
+        removePoops(poopList: pet.poops)
         pet = bird
         switchAnimalViews()
         updateView()
     }
     
     @IBAction func bunnyPressed(_ sender: UIButton) {
-        removePoops()
+        removePoops(poopList: pet.poops)
         pet = bunny
         switchAnimalViews()
         updateView()
     }
     
     @IBAction func fishPressed(_ sender: UIButton) {
-        removePoops()
+        removePoops(poopList: pet.poops)
         pet = fish
         switchAnimalViews()
         updateView()
     }
     
     @IBAction func cleanPressed(_ sender: UIButton) {
-        removePoops()
+        removePoops(poopList: pet.poops)
         pet.cleanPoop()
         cleanButton.isHidden = true
     }
@@ -124,7 +126,7 @@ class ViewController: UIViewController {
             happinessView.color = purple
             hungerView.color = purple
             background.backgroundColor = purple
-            petImage.image = UIImage(named: "cat.png")
+            petImage.setImage(UIImage(named: "cat.png"), for: .normal)
             
             loadPoops(poopList: pet.poops)
             
@@ -133,7 +135,7 @@ class ViewController: UIViewController {
             happinessView.color = orange
             hungerView.color = orange
             background.backgroundColor = orange
-            petImage.image = UIImage(named: "dog.png")
+            petImage.setImage(UIImage(named: "dog.png"), for: .normal)
             
             loadPoops(poopList: pet.poops)
             
@@ -142,7 +144,7 @@ class ViewController: UIViewController {
             happinessView.color = pink
             hungerView.color = pink
             background.backgroundColor = pink
-            petImage.image = UIImage(named: "bird.png")
+            petImage.setImage(UIImage(named: "bird.png"), for: .normal)
             
             loadPoops(poopList: pet.poops)
             
@@ -151,7 +153,7 @@ class ViewController: UIViewController {
             happinessView.color = mint
             hungerView.color = mint
             background.backgroundColor = mint
-            petImage.image = UIImage(named: "bunny.png")
+            petImage.setImage(UIImage(named: "bunny.png"), for: .normal)
             
             loadPoops(poopList: pet.poops)
             
@@ -160,7 +162,7 @@ class ViewController: UIViewController {
             happinessView.color = blue
             hungerView.color = blue
             background.backgroundColor = blue
-            petImage.image = UIImage(named: "fish.png")
+            petImage.setImage(UIImage(named: "fish.png"), for: .normal)
             
             loadPoops(poopList: pet.poops)
             
@@ -180,14 +182,33 @@ class ViewController: UIViewController {
     
     func loadPoops(poopList: [Poop]){
         for poop in poopList{
-            poopView.addSubview(poop)
+            background.addSubview(poop)
         }
     }
     
-    func removePoops(){
-        for poop in poopView.subviews{
+    func removePoops(poopList: [Poop]){
+        
+        for (_, poop) in poopList.enumerated() {
             poop.removeFromSuperview()
         }
+    }
+
+    @IBAction func takePetPicture(_ sender: Any) {
+        imagePicker.delegate = self
+        imagePicker.sourceType = .camera
+        imagePicker.cameraCaptureMode = .photo
+        imagePicker.modalPresentationStyle = .fullScreen
+        present(imagePicker, animated: true, completion: nil)
+    }
+    
+    func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : Any]) {
+        let image = info[UIImagePickerControllerOriginalImage] as? UIImage
+        petImage.setImage(image, for: .normal)
+        dismiss(animated: true, completion: nil)
+    }
+    
+    func imagePickerControllerDidCancel(_ picker: UIImagePickerController) {
+        dismiss(animated: true, completion: nil)
     }
 
     override func didReceiveMemoryWarning() {

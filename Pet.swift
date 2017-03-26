@@ -64,10 +64,6 @@ class Pet{
     }
     
     func poop(x:Int,y:Int) -> Poop{
-        
-        //happinessLevel = 100
-        //fedLevel = 50
-        
         let frame = CGRect(x: x,y: y,width: 37,height: 37)
         let aPoop = Poop(frame: frame)
         poops.append(aPoop)
