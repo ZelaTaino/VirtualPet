@@ -8,20 +8,19 @@
 
 import UIKit
 
-class Poop: UIImageView {
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
+class Poop: UIView {
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        let img = UIImage(named: "poop.png")
-        self.image = img
+        let img = UIImageView(image: UIImage(named: "poop.png"))
+        let imgFrame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
+        img.frame = imgFrame
+        self.addSubview(img)
+        
+    }
+    
+    override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
+        self.removeFromSuperview()
     }
     
     required init?(coder aDecoder: NSCoder) {
